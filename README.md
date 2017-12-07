@@ -261,3 +261,4 @@ grep "ion trans" S_Table6.csv >> ion_trans.csv
 
 grep "EntrezGene" S_Table6.csv > ATP_synthesis_coupled.csv
 grep "ATP synthesis coupled" S_Table6.csv >> ATP_synthesis_coupled.csv
+
