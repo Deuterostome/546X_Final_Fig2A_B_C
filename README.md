@@ -198,7 +198,7 @@ biocLite("biomaRt")
 biocLite("topGO")
 biocLite("GOSemSim")
 library("biomaRt")
-mart <- useMart(biomart = "plants_mart", host="plants.ensembl.org", dataset="zmays_eg_gene")
+mart = useMart('ENSEMBL_MART_ENSEMBL', dataset='zmays_gene_ensembl')
 univ.geneID <- getBM(attributes=c("ensembl_gene_id", "entrezgene"), mart = mart) # 40481
 univ.geneID
 univ.geneID4
@@ -238,16 +238,10 @@ library("GOSemSim")
 goFrame=GOFrame(goframeData,organism="Zea mays")
 goAllFrame=GOAllFrame(goFrame)
 
-
 library(GSEABase)
 gsc <- GeneSetCollection(goAllFrame, setType = GOCollection())
 
 params <- GSEAGOHyperGParams(name="Domestication Zea mays GO", geneSetCollection=gsc, geneIds = f2_ra1_1_GO[,10], universeGeneIds = univ.geneID4$entrezgene, ontology = "BP", pvalueCutoff = 0.05, conditional = TRUE, testDirection = "over")
-
-
-
-f2_ra1_1_GO
-
 
 my.geneID = read.csv("S2.csv", header=T,stringsAsFactors = F)
 my.geneID <- my.geneID[,1:5]
