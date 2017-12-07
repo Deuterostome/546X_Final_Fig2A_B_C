@@ -1096,6 +1096,63 @@ ATP_synthesis_coupled_ra1_ra2_2mm = merge (ATP_synthesis_coupled_GO_ra1_2, ATP_s
 ATP_synthesis_coupled_ra2_ra3_2mm = merge (ATP_synthesis_coupled_GO_ra2_2, ATP_synthesis_coupled_GO_ra3_2, by = "gene_id")
 
 
+# Getting average P_value
+
+
+1_1mm = c(
+# column 1
+(mean(GGG_ra2_ra3_2mm$qval.x) + mean(GGG_ra2_ra3_2mm$qval.y))/2
+1n_1_1c
+1n_2_1c
+2c_1_1c
+2c_2_1c
+3v_1_1c
+3v_2_1c
+4t_1_1c
+4t_2_1c
+5s_1_1c
+5s_2_1c
+6t_1_1c
+6t_2_1c
+7n_1_1c
+7n_2_1c
+8R_1_1c
+8R_2_1c
+9G_1_1c
+9G_2_1c
+10l_1_1c
+10l_2_1c
+11r_1_1c
+11r_2_1c
+12m_1_1c
+12m_2_1c
+13c_1_1c
+13c_2_1c
+14s_1_1c
+14s_2_1c
+15t_1_1c
+15t_2_1c
+16i_1_1c
+16i_2_1c
+17s_1_1c
+17s_2_1c
+18i_1_1c
+18i_2_1c
+19p_1_1c
+19p_2_1c
+20n_1_1c
+20n_2_1c
+21m_1_1c
+21m_2_1c
+22i_1_1c
+22i_2_1c
+23A_1_1c
+23A_2_1c
+
+
+
+
+
 
 
 # for ra1@1mm 
