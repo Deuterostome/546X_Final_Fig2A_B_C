@@ -191,68 +191,73 @@ venn.diagram(
 )
 
 ###################################
-# GO enrichment
-source("https://bioconductor.org/biocLite.R")
-biocLite("GO.db")
-biocLite("biomaRt")
-biocLite("topGO")
-biocLite("GOSemSim")
-library("biomaRt")
-mart = useMart('ENSEMBL_MART_ENSEMBL', dataset='zmays_gene_ensembl')
-univ.geneID <- getBM(attributes=c("ensembl_gene_id", "entrezgene"), mart = mart) # 40481
-univ.geneID
-univ.geneID4
-## remove genes with no corresponding Entrez Gene ID
-univ.geneID2 <- univ.geneID[!is.na(univ.geneID[,2]),] # 14142 
-## remove duplicated Entrez Gene ID
-univ.geneID3 <- univ.geneID2[ !duplicated(univ.geneID2[,2]),] # 13630
-##Get GO terms
-univ.geneID4<-getBM(attributes=c("entrezgene","goslim_goa_accession","name_1006","namespace_1003","go_linkage_type"),filters='entrezgene',mart=mart,values=univ.geneID3$entrezgene)
-# Start from here
-head(univ.geneID4)
-write.csv(univ.geneID4, file = "univ_geneID4.csv")
-univ.geneID4[,2]
+## Fig 2C
+# ra1
+grep "EntrezGene" S_Table6.csv > nucleosome.csv
+grep "nucleosome" S_Table6.csv >> nucleosome.csv
 
+grep "EntrezGene" S_Table6.csv > chromatin.csv
+grep "chromatin" S_Table6.csv >> chromatin.csv
 
-## Code evidence for genes without GO terms as NA
-univ.geneID5<-univ.geneID4[-which(univ.geneID4[,2]==""),]
-###Make dataframe for GOStats
-goframeData <- data.frame(go_id = univ.geneID4$goslim_goa_accession, Evidence = univ.geneID4$go_linkage_type, gene_id = univ.geneID4$entrezgene,stringsAsFactors=F)
+grep "EntrezGene" S_Table6.csv > vesicle.csv
+grep "vesicle" S_Table6.csv >> vesicle.csv
 
+grep "EntrezGene" S_Table6.csv > temperature.csv
+grep "temperature" S_Table6.csv >> temperature.csv
 
+grep "EntrezGene" S_Table6.csv > stress.csv
+grep "stress" S_Table6.csv >> stress.csv
 
+grep "EntrezGene" S_Table6.csv > transcription.csv
+grep "transcription" S_Table6.csv >> transcription.csv
 
-## Make my geneID
-f2_ra1_1 = filter(f2_df, series == "mut_series", size == "1mm", q2 == "ra1", significant == "yes")
-f2_ra1_1_cut = f2_ra1_1[, 1:9]
-colnames(f2_ra1_1_cut)[1] <- "ensembl_gene_id"
-f2_ra1_1_cut_A = arrange (f2_ra1_1_cut, ensembl_gene_id)
-univ.geneID3_A = arrange (univ.geneID3, ensembl_gene_id)
-f2_ra1_1_GO <- merge(f2_ra1_1_cut_A, univ.geneID3_A, by ="ensembl_gene_id") # 620
-f2_ra1_1_GO
+grep "EntrezGene" S_Table6.csv > nitrogen.csv
+grep "nitrogen" S_Table6.csv >> nitrogen.csv
 
-## GO enrichment
-library("GOstats")
-library("GOSemSim")
-##Prepare GO to gene mappings
-goFrame=GOFrame(goframeData,organism="Zea mays")
-goAllFrame=GOAllFrame(goFrame)
+grep "EntrezGene" S_Table6.csv > RNA_synthetase.csv
+grep "RNA synthetase" S_Table6.csv >> RNA_synthetase.csv
 
-library(GSEABase)
-gsc <- GeneSetCollection(goAllFrame, setType = GOCollection())
+grep "EntrezGene" S_Table6.csv > G_protein.csv
+grep "G-protein" S_Table6.csv >> G_protein.csv
 
-params <- GSEAGOHyperGParams(name="Domestication Zea mays GO", geneSetCollection=gsc, geneIds = f2_ra1_1_GO[,10], universeGeneIds = univ.geneID4$entrezgene, ontology = "BP", pvalueCutoff = 0.05, conditional = TRUE, testDirection = "over")
+grep "EntrezGene" S_Table6.csv > light.csv
+grep "light" S_Table6.csv >> light.csv
 
-my.geneID = read.csv("S2.csv", header=T,stringsAsFactors = F)
-my.geneID <- my.geneID[,1:5]
-colnames(my.geneID)[1] <- "ensembl_gene_id"
-my.geneID_A = arrange (my.geneID, ensembl_gene_id)
+grep "EntrezGene" S_Table6.csv > redox.csv
+grep "redox" S_Table6.csv >> redox.csv
 
-my.geneID2 <- merge(my.geneID_A, univ.geneID3_A, by ="ensembl_gene_id") # 620
-my.geneID2
-my.geneID_A
+grep "EntrezGene" S_Table6.csv > monosaccharide.csv
+grep "monosaccharide" S_Table6.csv >> monosaccharide.csv
 
-my.geneID_A
-univ.geneID3_A
-## remove duplicated Entrez Gene ID
-my.geneID3 <- my.geneID2[ !duplicated(my.geneID2$entrezgene),] # 620
+grep "EntrezGene" S_Table6.csv > cell_wall.csv
+grep "cell wall" S_Table6.csv >> cell_wall.csv
+
+grep "EntrezGene" S_Table6.csv > sucrose.csv
+grep "sucrose" S_Table6.csv >> sucrose.csv
+
+grep "EntrezGene" S_Table6.csv > trehalose.csv
+grep "trehalose" S_Table6.csv >> trehalose.csv
+
+grep "EntrezGene" S_Table6.csv > intracellular_protein.csv
+grep "intracellular protein" S_Table6.csv >> intracellular_protein.csv
+
+grep "EntrezGene" S_Table6.csv > small_GTPase.csv
+grep "small GTPase" S_Table6.csv >> small_GTPase.csv
+
+grep "EntrezGene" S_Table6.csv > intracellular_signaling.csv
+grep "intracellular signaling" S_Table6.csv >> intracellular_signaling.csv
+
+grep "EntrezGene" S_Table6.csv > proteasome.csv
+grep "proteasome" S_Table6.csv >> proteasome.csv
+
+grep "EntrezGene" S_Table6.csv > nucleocytoplasmic.csv
+grep "nucleocytoplasmic" S_Table6.csv >> nucleocytoplasmic.csv
+
+grep "EntrezGene" S_Table6.csv > mitochondrial_transport.csv
+grep "mitochondrial transport" S_Table6.csv >> mitochondrial_transport.csv
+
+grep "EntrezGene" S_Table6.csv > ion_trans.csv
+grep "ion trans" S_Table6.csv >> ion_trans.csv
+
+grep "EntrezGene" S_Table6.csv > ATP_synthesis_coupled.csv
+grep "ATP synthesis coupled" S_Table6.csv >> ATP_synthesis_coupled.csv
