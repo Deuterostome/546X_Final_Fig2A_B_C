@@ -1102,52 +1102,52 @@ ATP_synthesis_coupled_ra2_ra3_2mm = merge (ATP_synthesis_coupled_GO_ra2_2, ATP_s
 1_1mm = c(
 # column 1
 (mean(GGG_ra2_ra3_2mm$qval.x) + mean(GGG_ra2_ra3_2mm$qval.y))/2
-1n_1_1c
-1n_2_1c
-2c_1_1c
-2c_2_1c
-3v_1_1c
-3v_2_1c
-4t_1_1c
-4t_2_1c
-5s_1_1c
-5s_2_1c
-6t_1_1c
-6t_2_1c
-7n_1_1c
-7n_2_1c
-8R_1_1c
-8R_2_1c
-9G_1_1c
-9G_2_1c
-10l_1_1c
-10l_2_1c
-11r_1_1c
-11r_2_1c
-12m_1_1c
-12m_2_1c
-13c_1_1c
-13c_2_1c
-14s_1_1c
-14s_2_1c
-15t_1_1c
-15t_2_1c
-16i_1_1c
-16i_2_1c
-17s_1_1c
-17s_2_1c
-18i_1_1c
-18i_2_1c
-19p_1_1c
-19p_2_1c
-20n_1_1c
-20n_2_1c
-21m_1_1c
-21m_2_1c
-22i_1_1c
-22i_2_1c
-23A_1_1c
-23A_2_1c
+1n_1_1c = (mean(nucleosome_ra1_ra2_ra3_1mm$qval.x) + mean(nucleosome_ra1_ra2_ra3_1mm$qval.y))/2
+1n_2_1c = (mean(nucleosome_ra1_ra2_ra3_2mm$qval.x) + mean(nucleosome_ra1_ra2_ra3_2mm$qval.y))/2
+2c_1_1c = (mean(chromatin_ra1_ra2_ra3_1mm$qval.x) + mean(chromatin_ra1_ra2_ra3_1mm$qval.y))/2
+2c_2_1c = (mean(chromatin_ra1_ra2_ra3_2mm$qval.x) + mean(chromatin_ra1_ra2_ra3_2mm$qval.y))/2
+3v_1_1c = (mean(vesicle_ra1_ra2_ra3_1mm$qval.x) + mean(vesicle_ra1_ra2_ra3_1mm$qval.y))/2
+3v_2_1c = (mean(vesicle_ra1_ra2_ra3_2mm$qval.x) + mean(vesicle_ra1_ra2_ra3_2mm$qval.y))/2
+4t_1_1c = (mean(temperature_ra1_ra2_ra3_1mm$qval.x) + mean(temperature_ra1_ra2_ra3_1mm$qval.y))/2
+4t_2_1c = (mean(temperature_ra1_ra2_ra3_2mm$qval.x) + mean(temperature_ra1_ra2_ra3_2mm$qval.y))/2
+5s_1_1c = (mean(stress_ra1_ra2_ra3_1mm$qval.x) + mean(stress_ra1_ra2_ra3_1mm$qval.y))/2
+5s_2_1c = (mean(stress_ra1_ra2_ra3_2mm$qval.x) + mean(stress_ra1_ra2_ra3_2mm$qval.y))/2
+6t_1_1c = (mean(transcription_ra1_ra2_ra3_1mm$qval.x) + mean(transcription_ra1_ra2_ra3_1mm$qval.y))/2
+6t_2_1c = (mean(transcription_ra1_ra2_ra3_2mm$qval.x) + mean(transcription_ra1_ra2_ra3_2mm$qval.y))/2
+7n_1_1c = (mean(nitrogen_ra1_ra2_ra3_1mm$qval.x) + mean(nitrogen_ra1_ra2_ra3_1mm$qval.y))/2
+7n_2_1c = (mean(nitrogen_ra1_ra2_ra3_2mm$qval.x) + mean(nitrogen_ra1_ra2_ra3_2mm$qval.y))/2
+8R_1_1c = (mean(RNA_synthetase_ra1_ra2_ra3_1mm$qval.x) + mean(RNA_synthetase_ra1_ra2_ra3_1mm$qval.y))/2
+8R_2_1c = (mean(RNA_synthetase_ra1_ra2_ra3_2mm$qval.x) + mean(RNA_synthetase_ra1_ra2_ra3_2mm$qval.y))/2
+9G_1_1c = (mean(G_protein_ra1_ra2_ra3_1mm$qval.x) + mean(G_protein_ra1_ra2_ra3_1mm$qval.y))/2
+9G_2_1c = (mean(G_protein_ra1_ra2_ra3_2mm$qval.x) + mean(G_protein_ra1_ra2_ra3_2mm$qval.y))/2
+10l_1_1c = (mean(light_ra1_ra2_ra3_1mm$qval.x) + mean(light_ra1_ra2_ra3_1mm$qval.y))/2
+10l_2_1c = (mean(light_ra1_ra2_ra3_2mm$qval.x) + mean(light_ra1_ra2_ra3_2mm$qval.y))/2
+11r_1_1c = (mean(redox_ra1_ra2_ra3_1mm$qval.x) + mean(redox_ra1_ra2_ra3_1mm$qval.y))/2
+11r_2_1c = (mean(redox_ra1_ra2_ra3_2mm$qval.x) + mean(redox_ra1_ra2_ra3_2mm$qval.y))/2
+12m_1_1c = (mean(monosaccharide_ra1_ra2_ra3_1mm$qval.x) + mean(monosaccharide_ra1_ra2_ra3_1mm$qval.y))/2
+12m_2_1c = (mean(monosaccharide_ra1_ra2_ra3_2mm$qval.x) + mean(monosaccharide_ra1_ra2_ra3_2mm$qval.y))/2
+13c_1_1c = (mean(cell_wall_ra1_ra2_ra3_1mm$qval.x) + mean(cell_wall_ra1_ra2_ra3_1mm$qval.y))/2
+13c_2_1c = (mean(cell_wall_ra1_ra2_ra3_2mm$qval.x) + mean(cell_wall_ra1_ra2_ra3_2mm$qval.y))/2
+14s_1_1c = (mean(sucrose_ra1_ra2_ra3_1mm$qval.x) + mean(sucrose_ra1_ra2_ra3_1mm$qval.y))/2
+14s_2_1c = (mean(sucrose_ra1_ra2_ra3_2mm$qval.x) + mean(sucrose_ra1_ra2_ra3_2mm$qval.y))/2
+15t_1_1c = (mean(trehalose_ra1_ra2_ra3_1mm$qval.x) + mean(trehalose_ra1_ra2_ra3_1mm$qval.y))/2
+15t_2_1c = (mean(trehalose_ra1_ra2_ra3_2mm$qval.x) + mean(trehalose_ra1_ra2_ra3_2mm$qval.y))/2
+16i_1_1c = (mean(intracellular_protein_ra1_ra2_ra3_1mm$qval.x) + mean(intracellular_protein_ra1_ra2_ra3_1mm$qval.y))/2
+16i_2_1c = (mean(intracellular_protein_ra1_ra2_ra3_2mm$qval.x) + mean(intracellular_protein_ra1_ra2_ra3_2mm$qval.y))/2
+17s_1_1c = (mean(small_GTPase_ra1_ra2_ra3_1mm$qval.x) + mean(small_GTPase_ra1_ra2_ra3_1mm$qval.y))/2
+17s_2_1c = (mean(small_GTPase_ra1_ra2_ra3_2mm$qval.x) + mean(small_GTPase_ra1_ra2_ra3_2mm$qval.y))/2
+18i_1_1c = (mean(intracellular_signaling_ra1_ra2_ra3_1mm$qval.x) + mean(intracellular_signaling_ra1_ra2_ra3_1mm$qval.y))/2
+18i_2_1c = (mean(intracellular_signaling_ra1_ra2_ra3_2mm$qval.x) + mean(intracellular_signaling_ra1_ra2_ra3_2mm$qval.y))/2
+19p_1_1c = (mean(proteasome_ra1_ra2_ra3_1mm$qval.x) + mean(proteasome_ra1_ra2_ra3_1mm$qval.y))/2
+19p_2_1c = (mean(proteasome_ra1_ra2_ra3_2mm$qval.x) + mean(proteasome_ra1_ra2_ra3_2mm$qval.y))/2
+20n_1_1c = (mean(nucleocytoplasmic_ra1_ra2_ra3_1mm$qval.x) + mean(nucleocytoplasmic_ra1_ra2_ra3_1mm$qval.y))/2
+20n_2_1c = (mean(nucleocytoplasmic_ra1_ra2_ra3_2mm$qval.x) + mean(nucleocytoplasmic_ra1_ra2_ra3_2mm$qval.y))/2
+21m_1_1c = (mean(mitochondrial_transport_ra1_ra2_ra3_1mm$qval.x) + mean(mitochondrial_transport_ra1_ra2_ra3_1mm$qval.y))/2
+21m_2_1c = (mean(mitochondrial_transport_ra1_ra2_ra3_2mm$qval.x) + mean(mitochondrial_transport_ra1_ra2_ra3_2mm$qval.y))/2
+22i_1_1c = (mean(ion_trans_ra1_ra2_ra3_1mm$qval.x) + mean(ion_trans_ra1_ra2_ra3_1mm$qval.y))/2
+22i_2_1c = (mean(ion_trans_ra1_ra2_ra3_2mm$qval.x) + mean(ion_trans_ra1_ra2_ra3_2mm$qval.y))/2
+23A_1_1c = (mean(ATP_synthesis_coupled_ra1_ra2_ra3_1mm$qval.x) + mean(ATP_synthesis_coupled_ra1_ra2_ra3_1mm$qval.y))/2
+23A_2_1c = (mean(ATP_synthesis_coupled_ra1_ra2_ra3_2mm$qval.x) + mean(ATP_synthesis_coupled_ra1_ra2_ra3_2mm$qval.y))/2
 
 
 
